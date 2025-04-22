@@ -1,0 +1,61 @@
+#ccna-day10
+
+### Overview
+- We are focusing on the Layer 3 header
+- Minimum length of the IPv4 header is 20 bytes
+- Maximum length is 60 bytes
+
+### Fields
+- Version
+	- Length: 4 bits
+	- Identifies the version of IP used.
+	- Either IPv4 or IPv6
+- IHL (Internet Header Length)
+	- Length: 4 bits
+	- Identifies the length of the header in 4 byte increments
+	- If the value is 5 then 5 x 4 bytes = 20 bytes total length
+- DSCP (Differentiated Services Code Point)
+	- Length: 6 bits
+	- Used for QoS (Quality of Service)
+	- Prioritizes delay-sensitive data
+- ECN (Explicit Congestion Notification)
+	- Length: 2 bits
+	- Provides end to end notifications of network congestion without dropping packets
+- Total Length
+	- Length: 16 bits
+	- Indicates the total length of the packet (L3 header + L4 segment)
+	- Measured in bytes (not in increments)
+	- Minimum value is 20 (IPv4 header with no data)
+	- Maximum value is 65535
+- Identification
+	- Length: 16 bits
+	- If a packet is fragmented due to being larger than the MTU (Maximum Transmission Unit) this field identifies which packet it belongs to.
+- Flags
+	- Length: 3 bits
+	- Bit 0: reserved always 0
+	- Bit 1: DF (Don't Fragment) indicates a packet should not be fragmented
+	- Bit 2: MF (More Fragments) indicates there are more fragments in the packet
+- Fragment Offset
+	- Length: 13 bits
+	- Indicates the position of the fragment within the original unfragmented packet
+	- Allows the packet to be correctly reconstructed
+- TTL
+	- Length: 8 bits
+	- Used to prevent infinite loops
+	- In practice it indicates a hop count, the router decreases the TTL by 1
+- Protocol
+	- Length: 8 bits
+	- Indicates the protocol of the encapsulated L4 segment
+	- Value 6: TCP
+	- Value 17: UDP
+	- Value 1: ICMP
+	- Value 89: OSPF
+- Header Checksum
+	- Length: 16 bits
+	- Calculated checksum used to check for errors in the IPv4 header
+- Source / Destination
+	- Length: 32 bits each
+	- IPv4 address of source and destination
+- Options
+	- Length: between 0 to 320 bits
+	- Rarely used
