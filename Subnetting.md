@@ -1,5 +1,8 @@
 #ccna-day13 #ccna-day14 #ccna-day15
 
+
+[[Wildcard Masks]]
+
 IP addresses are assigned to companies by the IANA.
 
 ### CIDR
