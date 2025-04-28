@@ -2,6 +2,7 @@
 ### Interfaces
 - [[RJ45]]
 - [[SFP Transceiver]]
+- [[Serial Interfaces|Serial]]
 
 ### Cables
 - [[UTP Cables]]
