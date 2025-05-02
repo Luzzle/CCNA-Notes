@@ -19,3 +19,5 @@ You can configure 'preemption' so that the old active router does take back its 
 
 ### Protocols
 [[Hot Standby Router Protocol (HSRP)]]
+[[Virtual Router Redundancy Protocol (VRRP)]]
+[[Gateway Load Balancing Protocol (GLBP)]]
