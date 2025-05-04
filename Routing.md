@@ -6,7 +6,7 @@ Routing is the process routers use to determine the path that an IP packet shoul
 Routers store all of their known destinations in a routing table.
 
 There are 2 main routing methods routers use to learn routes:
-- **Dynamic Routing**: Routers use dynamic routing protocols (i.e. OSPF) to share routing information with each other automatically.
+- *[[Dynamic Routing]]*: Routers use dynamic routing protocols (i.e. OSPF) to share routing information with each other automatically.
 
 - **Static Routing**: A network engineer manually configures routes on the routers.
 

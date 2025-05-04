@@ -8,6 +8,7 @@
 [[Ethernet]]
 [[Protocols]]
 [[IPv4]]
+[[IPv6]]
 [[Routing]]
 [[Subnetting]]
 [[VLAN]]

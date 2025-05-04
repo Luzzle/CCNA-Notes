@@ -12,6 +12,7 @@ There are 3 versions of VTP. 1, 2, 3.
 ### Modes
 There are 3 VTP modes. **Server**, **Client** and **Transparent**
 
+VTP Password: `vtp [password]`
 #### Server
 VTP servers can:
 - Add/modify/delete VLANs

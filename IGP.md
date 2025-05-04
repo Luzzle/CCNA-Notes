@@ -25,17 +25,17 @@ In rare cases where a company uses 2 IGP's, the Administrative Distance is used 
 
 *See [[Dynamic Routing#Floating Static Routes|Floating Static Routes]]*
 
-| Route protocol / type | AD  |
-| --------------------- | --- |
-| Directly connected    | 0   |
-| Static                | 1   |
-| External BGP (eBGP)   | 20  |
-| EIGRP                 | 90  |
-| IGRP                  | 100 |
-| OSPF                  | 110 |
-| IS-IS                 | 115 |
-| RIP                   | 120 |
-| EIGRP                 | 170 |
-| Internal BGP (iBGP)   | 200 |
-| Unusable route        | 255 |
+| Route protocol / type | AD  | Router Letter |
+| --------------------- | --- | ------------- |
+| Directly connected    | 0   | C             |
+| Static                | 1   | S             |
+| External BGP (eBGP)   | 20  |               |
+| EIGRP                 | 90  | D             |
+| IGRP                  | 100 |               |
+| OSPF                  | 110 | O             |
+| IS-IS                 | 115 |               |
+| RIP                   | 120 | R             |
+| EIGRP                 | 170 |               |
+| Internal BGP (iBGP)   | 200 |               |
+| Unusable route        | 255 |               |
 
