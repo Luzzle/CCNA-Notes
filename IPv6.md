@@ -50,14 +50,15 @@ GigabitEthernet0/0 [up/up]
 (config-if)# ipv6 address [address] eui-64
 ```
 
-### Global Unicast Addresses
+### Address Types
+#### Global Unicast Addresses
 Global Unicast Addresses are public addresses which can be used over the internet.
 Must register to use them. Must be globally unique.
 
 Originally defined as the 2000::/3 block (2000:: to 3FFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF).
 Now defined as all addresses which aren't reserved for other purposes.
 
-### Unique Local Addresses
+#### Unique Local Addresses
 Unique local IPv6 addresses are *private addresses* which cannot be used over the internet.
 `FD45:93AC:8A8F:0001:0000:0000:0000:0001/64`
 
@@ -65,13 +66,13 @@ Unique local IPv6 addresses are *private addresses* which cannot be used over th
 **45:93AC:8A8F**: 40-bit 'global ID' which should be randomly generated.
 **0001**: 16 bit subnet identifier.
 
-### Link Local Addresses
+#### Link Local Addresses
 Automatically generated on IPv6 enabled interfaces.
 Uses the address block FE80::/10.
 
 All link local addresses begin with FE8.
 
-### Multicast
+#### Multicast
 IPv6 uses range FF00::/8 for multicast. (FF00:: to FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF)
 
 | Purpose           | IPv6 Address |
@@ -95,9 +96,27 @@ Multicast scopes
 - **Global** (FF0E)
 	- No boundaries
 
-### Anycast
+#### Anycast
 Multiple routers are configured with the same IPv6 address.
 They use a routing protocol to advertise the address.
 When hosts send packets, routers will forward it to the nearest router configured with that IP address.
 
 Configured using a regular unicast address and specify it as a multicast address.
+
+#### Solicited-Node Multicast Address
+This is calculated from a unicast address.
+
+It is ff02::1:ff + the last 6 hex digits of the unicast address.
+
+### Routing
+A router has 2 separate routing tables for IPv4 and IPv6.
+#### Static Routing
+```ios
+# ipv6 route destination/prefix-length next hop | exit interface
+```
+
+**Directly Attached**: only the exit interface is specified.
+**Recursive**: only the next hop is specified.
+**Fully Specified**: both.
+
+In IPv6 you cant use directly attached if the interface is Ethernet.
