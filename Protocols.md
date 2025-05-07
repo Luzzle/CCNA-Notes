@@ -6,3 +6,6 @@
 [[TCP]]
 [[UDP]]
 [[NDP]]
+[[Layer 2 Discovery Protocols]]
+[[NTP]]
+[[DNS]]
