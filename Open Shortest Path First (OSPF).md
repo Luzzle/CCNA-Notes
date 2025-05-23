@@ -19,6 +19,11 @@ Calculated based on the bandwidth (speed) of the interface.
 
 You should configure a reference bandwidth greater than the fastest links in your network.
 
+OSPF uses the following criteria to select the router ID:
+1. Manual configuration of the router ID.
+2. Highest IP address on a loopback interface.
+3. Highest IP address on a non-loopback interface.
+
 **The OSPF cost to a destination is the total cost of the exit interfaces. (Loopback interfaces have a cost of 1)**
 ### LSAs and LSBs
 Routers store information about the network in LSA's (Link State Advertisements) which are organized in a structure called LSDB (Link State Database).

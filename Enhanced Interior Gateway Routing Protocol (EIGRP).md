@@ -8,8 +8,6 @@ Complex formula that can take into account many values. By default the bandwidth
 Faster than [[Routing Information Protocol (RIP)|RIP]] in reacting to changes in the network.
 Sends messages using multi-cast address 224.0.0.10
 
-
-
 ### Configuration
 ```ios
 (config)# router eigrp 1
